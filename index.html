@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KognitiLabs — Powering Everyday India</title>
+  <meta name="description" content="KognitiLabs builds technology ecosystems for everyday Indian life — KiranaX for commerce, Vitality for wellness, Kundali for astrology, and TouchToHome for doorstep services." />
+  <meta name="keywords" content="KognitiLabs, KiranaX kirana billing app, Vitality health app India, astrology kundali app, TouchToHome doorstep services, Made in India apps" />
+  <meta name="author" content="KognitiLabs" />
+  <link rel="canonical" href="https://kognitilabs.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kognitilabs.com" />
+  <meta property="og:title" content="KognitiLabs — Powering Everyday India" />
+  <meta property="og:description" content="Technology ecosystems built for the everyday Indian — commerce, wellness, destiny, and home." />
+  <meta property="og:image" content="https://kognitilabs.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KognitiLabs" />
+  <meta name="twitter:description" content="Powering Everyday India" />
+  <meta name="twitter:image" content="https://kognitilabs.com/og-image.png" />
+  <meta name="theme-color" content="#07090E" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kognitilabs.com/#organization",
+        "name": "KognitiLabs",
+        "url": "https://kognitilabs.com",
+        "logo": "https://kognitilabs.com/og-image.png",
+        "description": "KognitiLabs is a technology company that builds and operates focused product brands for everyday Indian life — commerce, wellness, astrology, and home services.",
+        "foundingLocation": { "@type": "Place", "name": "India" }
+      },
+      {
+        "@type": "WebSite",
+        "name": "KognitiLabs",
+        "url": "https://kognitilabs.com",
+        "publisher": { "@id": "https://kognitilabs.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,400&family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #07090E;
+  --bg2: #0C0F18;
+  --surface: #101420;
+  --border: rgba(255,255,255,0.07);
+  --text: #E4E8F2;
+  --muted: #5E6880;
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --commerce: #FF6B35;
+  --wellness: #2ECC8F;
+  --destiny: #A855F7;
+  --services: #38BDF8;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+:focus:not(:focus-visible) { outline: none; }
+.skip-link {
+  position: absolute; left: 1rem; top: 1rem; z-index: 300;
+  padding: 0.65rem 1rem;
+  background: var(--gold); color: #000;
+  font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  border-radius: 2px;
+  clip: rect(0, 0, 0, 0); clip-path: inset(50%);
+  width: 1px; height: 1px; overflow: hidden; white-space: nowrap;
+}
+.skip-link:focus {
+  clip: auto; clip-path: none;
+  width: auto; height: auto; overflow: visible;
+  white-space: normal;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+/* NOISE OVERLAY */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 1.1rem 6%;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(7,9,14,0.9);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800; font-size: 1.2rem;
+  color: var(--text); text-decoration: none;
+  letter-spacing: -0.03em;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a {
+  color: var(--muted); text-decoration: none;
+  font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--gold) !important;
+  color: #000 !important;
+  padding: 0.5rem 1.2rem; border-radius: 2px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--gold-light) !important; }
+.nav-toggle {
+  display: none;
+  align-items: center; justify-content: center;
+  width: 2.75rem; height: 2.75rem;
+  padding: 0; border: 1px solid var(--border);
+  border-radius: 2px;
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-toggle-bar {
+  display: block; width: 1.15rem; height: 2px;
+  background: var(--text); position: relative;
+  transition: background 0.2s;
+}
+.nav-toggle-bar::before, .nav-toggle-bar::after {
+  content: '';
+  position: absolute; left: 0; width: 100%; height: 2px;
+  background: var(--text); transition: transform 0.2s;
+}
+.nav-toggle-bar::before { top: -6px; }
+.nav-toggle-bar::after { top: 6px; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar { background: transparent; }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::before { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 9rem 6% 5rem;
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 100%);
+}
+.orb { position: absolute; border-radius: 50%; filter: blur(140px); }
+.orb1 {
+  width: 700px; height: 700px; opacity: 0.1;
+  top: -150px; right: -150px;
+  background: radial-gradient(circle, var(--gold), transparent 70%);
+  animation: breathe 9s ease-in-out infinite alternate;
+}
+.orb2 {
+  width: 500px; height: 500px; opacity: 0.07;
+  bottom: -100px; left: 5%;
+  background: radial-gradient(circle, var(--destiny), transparent 70%);
+  animation: breathe 11s ease-in-out infinite alternate-reverse;
+}
+.orb3 {
+  width: 300px; height: 300px; opacity: 0.06;
+  top: 30%; left: 40%;
+  background: radial-gradient(circle, var(--wellness), transparent 70%);
+  animation: breathe 13s ease-in-out infinite alternate;
+}
+@keyframes breathe {
+  from { transform: scale(1); opacity: 0.07; }
+  to { transform: scale(1.3); opacity: 0.14; }
+}
+.hero-eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  opacity: 0; animation: slideUp 0.8s ease forwards 0.1s;
+  position: relative; z-index: 1;
+}
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3.2rem, 8.5vw, 7.5rem);
+  font-weight: 300; line-height: 1.02;
+  letter-spacing: -0.025em; max-width: 860px;
+  opacity: 0; animation: slideUp 0.9s ease forwards 0.25s;
+  position: relative; z-index: 1;
+}
+.hero-title em { font-style: italic; color: var(--gold); }
+.hero-title .indent { display: block; padding-left: 2.5rem; }
+.hero-sub {
+  font-size: 1.05rem; color: var(--muted);
+  max-width: 520px; margin-top: 2rem; line-height: 1.85;
+  opacity: 0; animation: slideUp 0.9s ease forwards 0.4s;
+  position: relative; z-index: 1;
+}
+.hero-actions {
+  display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;
+  opacity: 0; animation: slideUp 0.9s ease forwards 0.55s;
+  position: relative; z-index: 1;
+}
+.btn-gold {
+  background: var(--gold); color: #000;
+  padding: 0.9rem 2.2rem; border: none; border-radius: 2px;
+  font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-ghost {
+  background: transparent; color: var(--text);
+  padding: 0.9rem 2.2rem;
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 2px;
+  font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; display: inline-block;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+.hero-stats {
+  display: flex; gap: 4rem; margin-top: 5rem;
+  padding-top: 2rem; border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+  opacity: 0; animation: slideUp 0.9s ease forwards 0.7s;
+  position: relative; z-index: 1;
+}
+.hero-stat-n {
+  font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
+  color: var(--gold); line-height: 1;
+}
+.hero-stat-l {
+  font-size: 0.7rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── TICKER ── */
+.ticker {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 0; overflow: hidden;
+  position: relative; z-index: 1;
+}
+.ticker-track {
+  display: flex; white-space: nowrap;
+  animation: ticker 30s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); padding: 0 2.5rem;
+}
+.ticker-item .dot { color: var(--gold); margin-right: 1rem; }
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── STORY SECTION ── */
+.story {
+  padding: 7rem 6%;
+  display: grid; grid-template-columns: 1fr 1.65fr;
+  gap: 6rem; align-items: start;
+  border-bottom: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+.story-left { position: sticky; top: 7rem; }
+.eyebrow {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.85rem;
+}
+.story-heading {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-weight: 300; line-height: 1.18; letter-spacing: -0.015em;
+}
+.story-heading em { font-style: italic; color: var(--gold); }
+.story-block { margin-bottom: 2.5rem; }
+.story-block:last-child { margin-bottom: 0; }
+.story-block-title {
+  font-family: 'Syne', sans-serif; font-size: 0.72rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text); margin-bottom: 0.6rem;
+}
+.story-block p { color: var(--muted); font-size: 0.95rem; line-height: 1.9; }
+.story-block p + p { margin-top: 0.75rem; }
+.pullquote {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 300; font-style: italic;
+  line-height: 1.5; color: var(--text);
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+.pullquote em { color: var(--gold); font-style: normal; }
+
+/* ── ECOSYSTEM ── */
+.ecosystem {
+  padding: 7rem 6%;
+  background: var(--bg2);
+  position: relative; z-index: 1;
+}
+.eco-header {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: end; margin-bottom: 2.5rem;
+}
+.sec-heading {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300; line-height: 1.1; letter-spacing: -0.015em;
+}
+.sec-heading em { font-style: italic; color: var(--gold); }
+.eco-desc { color: var(--muted); font-size: 0.95rem; line-height: 1.85; }
+.parent-model {
+  font-size: 0.89rem; color: var(--muted); line-height: 1.8;
+  max-width: 52rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--border);
+  margin: 0 0 3.5rem;
+}
+.parent-model strong { color: var(--text); font-weight: 600; }
+
+/* ── VERTICAL CARDS ── */
+.verticals {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5px; background: var(--border);
+  border: 1px solid var(--border);
+}
+.vcard {
+  background: var(--surface);
+  padding: 2.75rem; position: relative; overflow: hidden;
+  text-decoration: none; color: inherit; display: block;
+  transition: background 0.3s;
+}
+.vcard:hover { background: rgba(255,255,255,0.02); }
+.vcard::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--vc);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.vcard:hover::before { transform: scaleX(1); }
+.vcard[data-v="commerce"] { --vc: var(--commerce); }
+.vcard[data-v="wellness"]  { --vc: var(--wellness); }
+.vcard[data-v="destiny"]   { --vc: var(--destiny); }
+.vcard[data-v="services"]  { --vc: var(--services); }
+.vcard-icon { font-size: 1.75rem; margin-bottom: 1rem; display: block; }
+.vcard-cat {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.63rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--vc); margin-bottom: 0.4rem;
+}
+.vcard-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--text); margin-bottom: 0.6rem;
+}
+.vcard-desc { font-size: 0.875rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+.vcard-status {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: 'Syne', sans-serif; font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.vdot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--vc);
+}
+.vdot.live { animation: blink 2s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+.vcard-wm {
+  position: absolute; bottom: -12px; right: -4px;
+  font-family: 'Fraunces', serif; font-size: 5.5rem;
+  font-weight: 700; color: var(--vc); opacity: 0.045;
+  line-height: 1; pointer-events: none; user-select: none;
+}
+.vcard-dim { opacity: 0.5; }
+
+/* ── APP DETAIL SECTIONS ── */
+.app-section {
+  padding: 6rem 6%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+.app-section.flip { direction: rtl; }
+.app-section.flip > * { direction: ltr; }
+.app-section[data-app="commerce"] { --ac: var(--commerce); }
+.app-section[data-app="wellness"]  { --ac: var(--wellness); }
+.app-section[data-app="destiny"]   { --ac: var(--destiny); }
+.app-visual {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--ac);
+  border-radius: 3px; padding: 2.5rem 2rem; text-align: center;
+}
+.app-emoji { font-size: 3.5rem; display: block; margin-bottom: 0.75rem; }
+.app-name {
+  font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
+  color: var(--ac);
+}
+.app-tagline { color: var(--muted); font-size: 0.875rem; margin-top: 0.3rem; }
+.app-feats { list-style: none; margin-top: 1.75rem; text-align: left; }
+.app-feats li {
+  padding: 0.55rem 0; border-bottom: 1px solid var(--border);
+  font-size: 0.83rem; color: var(--muted);
+  display: flex; align-items: center; gap: 0.65rem;
+}
+.app-feats li::before { content: '→'; color: var(--ac); font-weight: 700; flex-shrink: 0; }
+.app-content .eyebrow { margin-bottom: 0.4rem; }
+.app-heading {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 3vw, 2.75rem);
+  font-weight: 300; line-height: 1.15; letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+}
+.app-heading em { font-style: italic; color: var(--ac); }
+.app-content p { color: var(--muted); font-size: 0.94rem; line-height: 1.85; margin-bottom: 1rem; }
+.app-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.tag {
+  font-family: 'Syne', sans-serif; font-size: 0.63rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; border: 1px solid var(--ac);
+  color: var(--ac); border-radius: 1px;
+}
+.app-cta { margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* ── TOUCHTOHOME ── */
+.tth-section {
+  padding: 6rem 6%;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  position: relative; z-index: 1;
+}
+.tth-card {
+  border: 1px dashed rgba(56,189,248,0.25);
+  background: rgba(56,189,248,0.025);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; padding: 3.5rem;
+}
+.tth-title {
+  font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800;
+  color: var(--services); margin-bottom: 0.75rem; line-height: 1.3;
+}
+.tth-desc { color: var(--muted); font-size: 0.94rem; line-height: 1.85; margin-bottom: 1.25rem; }
+.tth-waitlist { display: flex; }
+.tth-input {
+  flex: 1; background: var(--surface);
+  border: 1px solid var(--border); border-right: none;
+  color: var(--text); padding: 0.85rem 1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.875rem;
+  outline: none; transition: border-color 0.2s;
+}
+.tth-input:focus { border-color: var(--services); }
+.tth-input::placeholder { color: var(--muted); }
+.tth-btn {
+  background: var(--services); color: #000; border: none;
+  padding: 0.85rem 1.5rem;
+  font-family: 'Syne', sans-serif; font-size: 0.73rem; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: opacity 0.2s; white-space: nowrap;
+}
+.tth-btn:hover { opacity: 0.85; }
+.tth-note { font-size: 0.72rem; color: var(--muted); margin-top: 0.6rem; min-height: 1.2em; }
+.tth-feats { list-style: none; }
+.tth-feats li {
+  padding: 0.7rem 0; border-bottom: 1px solid var(--border);
+  color: var(--muted); font-size: 0.875rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+
+/* ── IMPACT NUMBERS ── */
+.impact {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1.5px; background: var(--border);
+  position: relative; z-index: 1;
+}
+.impact-item {
+  background: var(--bg2); padding: 2.75rem 2rem; text-align: center;
+}
+.impact-n {
+  font-family: 'Syne', sans-serif; font-size: 2.25rem; font-weight: 800;
+  color: var(--gold); line-height: 1; margin-bottom: 0.5rem;
+}
+.impact-l { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ── PRINCIPLES ── */
+.principles {
+  padding: 7rem 6%;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  position: relative; overflow: hidden; z-index: 1;
+}
+.principles-orb {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 50% 70% at 50% 50%, rgba(201,168,76,0.05), transparent 70%);
+}
+.principles-heading {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 300; line-height: 1.08; margin-bottom: 1.25rem;
+  position: relative;
+}
+.principles-heading em { font-style: italic; color: var(--gold); }
+.principles-sub {
+  color: var(--muted); max-width: 540px; margin: 0 auto 3.5rem;
+  font-size: 0.97rem; line-height: 1.85; position: relative;
+}
+.pillars {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1.5px; background: var(--border);
+  border: 1px solid var(--border);
+  max-width: 960px; margin: 0 auto;
+  position: relative;
+}
+.pillar { background: var(--surface); padding: 2.25rem 1.5rem; }
+.pillar-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+.pillar-title {
+  font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700;
+  color: var(--text); margin-bottom: 0.4rem;
+}
+.pillar-desc { font-size: 0.77rem; color: var(--muted); line-height: 1.65; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 4rem 6% 2rem;
+  position: relative; z-index: 1;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 3rem;
+}
+.footer-brand {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+  margin-bottom: 0.75rem; letter-spacing: -0.02em;
+}
+.footer-brand span { color: var(--gold); }
+.footer-sub { color: var(--muted); font-size: 0.84rem; line-height: 1.75; max-width: 260px; }
+.footer-col h4 {
+  font-family: 'Syne', sans-serif; font-size: 0.63rem; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1rem;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-bottom {
+  padding-top: 1.5rem; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.footer-copy, .footer-india { font-size: 0.78rem; color: var(--muted); }
+.footer-india span { color: var(--gold); }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    padding: 5.5rem 6% 2rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(7,9,14,0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: none;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.28s ease, visibility 0.28s;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .nav-links li { width: 100%; border-bottom: 1px solid var(--border); }
+  .nav-links a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 0.82rem;
+  }
+  .nav-links a.nav-cta {
+    margin-top: 0.75rem;
+    text-align: center;
+    border-radius: 2px;
+    border-bottom: none;
+  }
+  .story { grid-template-columns: 1fr; gap: 2.5rem; }
+  .story-left { position: static; }
+  .eco-header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .verticals { grid-template-columns: 1fr; }
+  .app-section { grid-template-columns: 1fr; gap: 2.5rem; }
+  .app-section.flip { direction: ltr; }
+  .tth-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+  .impact { grid-template-columns: repeat(2,1fr); }
+  .pillars { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .hero-stats { gap: 2rem; }
+  .hero-title .indent { padding-left: 0; }
+}
+@media(max-width:480px){
+  .impact { grid-template-columns: 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .ticker-track { animation: none !important; }
+}
+body.nav-open { overflow: hidden; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ── NAV ── -->
+<nav id="topnav" aria-label="Primary">
+  <a href="#top" class="nav-logo">Kogniti<span>Labs</span></a>
+  <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+    <span class="nav-toggle-bar" aria-hidden="true"></span>
+  </button>
+  <ul class="nav-links" id="nav-menu" role="list">
+    <li><a href="#ecosystem">Products</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#touchtohome">Coming Soon</a></li>
+    <li><a href="mailto:support@kognitilabs.com" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <p class="hero-eyebrow">KognitiLabs &nbsp;·&nbsp; Building for Bharat</p>
+
+  <h1 class="hero-title">
+    Not just apps.<br/>
+    <em class="indent">Life, reimagined.</em>
+  </h1>
+
+  <p class="hero-sub">
+    We build product ecosystems around the things that matter most in everyday Indian life — your shop, your body, your stars, your home.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#ecosystem" class="btn-gold">Explore Our Products</a>
+    <a href="#story" class="btn-ghost">Our Story</a>
+  </div>
+
+  <div class="hero-stats">
+    <div>
+      <div class="hero-stat-n">4</div>
+      <div class="hero-stat-l">Life Verticals</div>
+    </div>
+    <div>
+      <div class="hero-stat-n">3+</div>
+      <div class="hero-stat-l">Products Live or Beta</div>
+    </div>
+    <div>
+      <div class="hero-stat-n">13M+</div>
+      <div class="hero-stat-l">Addressable Market</div>
+    </div>
+    <div>
+      <div class="hero-stat-n">100%</div>
+      <div class="hero-stat-l">Made in India</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="dot">✦</span>KiranaX — Kirana Billing &amp; Inventory</span>
+    <span class="ticker-item"><span class="dot">✦</span>Vitality — AI Health &amp; Wellness</span>
+    <span class="ticker-item"><span class="dot">✦</span>Kundali — Vedic Astrology Charts</span>
+    <span class="ticker-item"><span class="dot">✦</span>TouchToHome — Doorstep Services</span>
+    <span class="ticker-item"><span class="dot">✦</span>Built for Bharat</span>
+    <span class="ticker-item"><span class="dot">✦</span>Offline First</span>
+    <span class="ticker-item"><span class="dot">✦</span>UPI Native</span>
+    <span class="ticker-item"><span class="dot">✦</span>KiranaX — Kirana Billing &amp; Inventory</span>
+    <span class="ticker-item"><span class="dot">✦</span>Vitality — AI Health &amp; Wellness</span>
+    <span class="ticker-item"><span class="dot">✦</span>Kundali — Vedic Astrology Charts</span>
+    <span class="ticker-item"><span class="dot">✦</span>TouchToHome — Doorstep Services</span>
+    <span class="ticker-item"><span class="dot">✦</span>Built for Bharat</span>
+    <span class="ticker-item"><span class="dot">✦</span>Offline First</span>
+    <span class="ticker-item"><span class="dot">✦</span>UPI Native</span>
+  </div>
+</div>
+
+<!-- ── STORY ── -->
+<section class="story" id="story">
+  <div class="story-left reveal">
+    <p class="eyebrow">Why We Exist</p>
+    <h2 class="story-heading">
+      India doesn't need<br/>more apps.<br/>
+      It needs <em>the right ones.</em>
+    </h2>
+  </div>
+
+  <div class="story-right">
+    <div class="story-block reveal d1">
+      <p class="story-block-title">The Problem</p>
+      <p>India has 700 million smartphone users, 13 million kirana stores, a 5,000-year tradition of Vedic astrology, and one of the world's fastest-growing wellness markets. And yet — the software built to serve these needs is either made in San Francisco, priced for Silicon Valley, or so bloated it never gets opened a second time.</p>
+      <p>The kirana owner in Nagpur is still doing stock on a torn notebook. The working professional in Pune is tracking calories in a spreadsheet. The family in Chennai is consulting a Jyotish because no app goes deep enough. The household in Bengaluru is still calling a plumber who may or may not show up.</p>
+    </div>
+
+    <blockquote class="pullquote reveal d2">
+      "The best software for India will be built by people who <em>live and breathe India.</em> That's our edge, and our commitment."
+    </blockquote>
+
+    <div class="story-block reveal d2">
+      <p class="story-block-title">Our Approach</p>
+      <p>At KognitiLabs, we don't start with technology. We start with a person — a real Indian person with a real Indian problem. We watch how they work, what they struggle with, and where existing software fails them. Then we build from scratch, in India, for India.</p>
+      <p>Every feature we ship, every pricing decision we make, every language we support — it all begins with one question: <strong style="color:var(--text);font-weight:600">does this actually work for the Indian user?</strong></p>
+    </div>
+
+    <div class="story-block reveal d3">
+      <p class="story-block-title">The Vision</p>
+      <p>We are building a portfolio of category-defining products — each one deeply useful in its vertical, each one a genuine part of everyday Indian life. Together, they form an ecosystem. Separately, they are each among the best of their kind.</p>
+      <p>This is not a side project. This is a company — and we are just getting started.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── ECOSYSTEM ── -->
+<section class="ecosystem" id="ecosystem">
+  <div class="eco-header reveal">
+    <div>
+      <p class="eyebrow">Our Ecosystem</p>
+      <h2 class="sec-heading">Four verticals.<br/><em>One India.</em></h2>
+    </div>
+    <p class="eco-desc">Each product addresses a deeply human need — the merchant counting stock at midnight, the professional tracking calories at lunch, the believer reading their birth chart, the family waiting for a service professional who actually shows up. We built a product for each of them.</p>
+  </div>
+
+  <p class="parent-model reveal d1"><strong>KognitiLabs</strong> is the parent company. Names like KiranaX, Vitality, Kundali, and TouchToHome are separate product brands — built for specific audiences, priced for Indian markets, and operated as focused B2C or B2B businesses under one roof.</p>
+
+  <div class="verticals reveal d1">
+    <a href="#kiranax" class="vcard" data-v="commerce">
+      <span class="vcard-icon">🛒</span>
+      <p class="vcard-cat">Commerce</p>
+      <h3 class="vcard-name">KiranaX</h3>
+      <p class="vcard-desc">Smart billing, inventory management, credit ledger and sales insights — built specifically for India's 13 million kirana store owners.</p>
+      <div class="vcard-status">
+        <span class="vdot live"></span>
+        <span style="color:var(--commerce)">Live — Web App</span>
+      </div>
+      <div class="vcard-wm">₹</div>
+    </a>
+
+    <a href="#vitality" class="vcard" data-v="wellness">
+      <span class="vcard-icon">🌿</span>
+      <p class="vcard-cat">Wellness</p>
+      <h3 class="vcard-name">Vitality</h3>
+      <p class="vcard-desc">AI-powered health tracking with an Indian food database, step sync, LLM diet planning, and a personal AI coach that understands your life.</p>
+      <div class="vcard-status">
+        <span class="vdot live"></span>
+        <span style="color:var(--wellness)">Beta — Android</span>
+      </div>
+      <div class="vcard-wm">♡</div>
+    </a>
+
+    <a href="#kundali" class="vcard" data-v="destiny">
+      <span class="vcard-icon">🔮</span>
+      <p class="vcard-cat">Destiny</p>
+      <h3 class="vcard-name">Kundali</h3>
+      <p class="vcard-desc">Detailed Vedic birth charts, divisional charts D1–D60, dasha predictions, and daily horoscopes — astrology made precise for the serious believer.</p>
+      <div class="vcard-status">
+        <span class="vdot live"></span>
+        <span style="color:var(--destiny)">Beta — Android</span>
+      </div>
+      <div class="vcard-wm">☽</div>
+    </a>
+
+    <a href="#touchtohome" class="vcard vcard-dim" data-v="services">
+      <span class="vcard-icon">🏠</span>
+      <p class="vcard-cat">Services</p>
+      <h3 class="vcard-name">TouchToHome</h3>
+      <p class="vcard-desc">Verified doorstep services at the tap of a button — plumbing, cleaning, repairs and more. Coming to your neighbourhood in 2025.</p>
+      <div class="vcard-status">
+        <span class="vdot"></span>
+        <span style="color:var(--services)">Coming Soon — 2025</span>
+      </div>
+      <div class="vcard-wm">⌂</div>
+    </a>
+  </div>
+</section>
+
+<!-- ── KIRANAX ── -->
+<section class="app-section" data-app="commerce" id="kiranax">
+  <div class="app-visual reveal">
+    <span class="app-emoji">🛒</span>
+    <div class="app-name">KiranaX</div>
+    <div class="app-tagline">Every shop, smarter.</div>
+    <ul class="app-feats">
+      <li>Barcode scan — product details auto-filled</li>
+      <li>Fast billing with WhatsApp sharing</li>
+      <li>Credit ledger &amp; payment reminders</li>
+      <li>Live sales, stock &amp; revenue dashboard</li>
+      <li>Low stock alerts &amp; reorder tracking</li>
+      <li>Offline-first — works without internet</li>
+    </ul>
+  </div>
+  <div class="app-content reveal d1">
+    <p class="eyebrow">Commerce Vertical</p>
+    <h2 class="app-heading">Built for the shopkeeper<br/>at the <em>counter</em></h2>
+    <p>India's kirana economy is worth ₹45 lakh crore — and almost all of it runs on paper, memory, and trust. KiranaX is the first billing and inventory app designed from the ground up for how a real kirana actually operates — not how a product manager imagined it does.</p>
+    <p>Scan a barcode and the product name, brand, and category auto-fill. Create a bill in under 10 seconds. Send a payment reminder to a credit customer via WhatsApp. See today's sales at a glance. No training required. No accountant needed.</p>
+    <div class="app-tags">
+      <span class="tag">Web App</span>
+      <span class="tag">Android</span>
+      <span class="tag">Offline First</span>
+      <span class="tag">UPI Native</span>
+      <span class="tag">WhatsApp</span>
+    </div>
+    <div class="app-cta">
+      <a href="https://kiranax.kognitilabs.com" class="btn-gold">Try KiranaX Free →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VITALITY ── -->
+<section class="app-section flip" data-app="wellness" id="vitality">
+  <div class="app-visual reveal">
+    <span class="app-emoji">🌿</span>
+    <div class="app-name">Vitality</div>
+    <div class="app-tagline">Your health, your way.</div>
+    <ul class="app-feats">
+      <li>Indian food calorie &amp; macro database</li>
+      <li>AI coach powered by advanced LLMs</li>
+      <li>Personalised diet planning</li>
+      <li>Steps counter — Android health sync</li>
+      <li>Water intake &amp; sleep tracking</li>
+      <li>Weekly insights &amp; progress trends</li>
+    </ul>
+  </div>
+  <div class="app-content reveal d1">
+    <p class="eyebrow">Wellness Vertical</p>
+    <h2 class="app-heading">Health tracking that<br/><em>understands India</em></h2>
+    <p>Most health apps know the calories in a Caesar salad but not in a dal tadka, a vada pav, or a glass of lassi. Vitality was built the other way around — starting with an Indian food database and building outward from there.</p>
+    <p>With an AI coach powered by cutting-edge language models, Vitality doesn't just count calories — it thinks with you. It adapts to whether you're vegetarian, whether you fast, whether you walk to work or sit at a desk. It's not a fitness app. It's a health companion that actually speaks your language.</p>
+    <div class="app-tags">
+      <span class="tag">Android</span>
+      <span class="tag">AI Coach</span>
+      <span class="tag">Indian Diet</span>
+      <span class="tag">LLM Powered</span>
+      <span class="tag">iOS Soon</span>
+    </div>
+    <div class="app-cta">
+      <a href="#" class="btn-ghost">Coming to Play Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── KUNDALI ── -->
+<section class="app-section" data-app="destiny" id="kundali">
+  <div class="app-visual reveal">
+    <span class="app-emoji">🔮</span>
+    <div class="app-name">Kundali</div>
+    <div class="app-tagline">Know your stars.</div>
+    <ul class="app-feats">
+      <li>Full Vedic birth chart — D1 through D60</li>
+      <li>Dasha &amp; antardasha period predictions</li>
+      <li>Daily, weekly &amp; monthly horoscope</li>
+      <li>Planetary transit tracking</li>
+      <li>Shareable chart cards for WhatsApp</li>
+      <li>Compatibility &amp; relationship charts</li>
+    </ul>
+  </div>
+  <div class="app-content reveal d1">
+    <p class="eyebrow">Destiny Vertical</p>
+    <h2 class="app-heading">Vedic astrology as <em>precise</em><br/>as it was meant to be</h2>
+    <p>India's Jyotish tradition is one of the most sophisticated knowledge systems ever created. But most astrology apps offer nothing more than vague daily quotes dressed up with pretty gradients. Kundali takes it seriously.</p>
+    <p>Every chart calculation is precise to the second. From divisional charts to dasha periods, Kundali offers the depth that a practising Jyotish would use — packaged in an app that anyone can open. And with shareable chart cards, your Kundali travels with you, ready for family, friends, or your astrologer to read at a glance.</p>
+    <div class="app-tags">
+      <span class="tag">Android</span>
+      <span class="tag">Vedic</span>
+      <span class="tag">D1–D60 Charts</span>
+      <span class="tag">Offline</span>
+      <span class="tag">Shareable</span>
+    </div>
+    <div class="app-cta">
+      <a href="#" class="btn-ghost">Coming to Play Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TOUCHTOHOME ── -->
+<section class="tth-section" id="touchtohome">
+  <div class="reveal" style="margin-bottom:2.5rem">
+    <p class="eyebrow">Services Vertical &nbsp;·&nbsp; Launching 2025</p>
+    <h2 class="sec-heading">TouchToHome</h2>
+  </div>
+  <div class="tth-card reveal d1">
+    <div>
+      <h3 class="tth-title">🏠 Doorstep services.<br/>At a tap.</h3>
+      <p class="tth-desc">India's home services market is broken — unreliable workers, no-shows, no receipts, no accountability. TouchToHome is building the trust layer this market has always needed: background-verified professionals, transparent pricing, and guaranteed quality.</p>
+      <p class="tth-desc" style="font-size:0.85rem;margin-bottom:1rem">Be the first to know when we launch in your city.</p>
+      <div class="tth-waitlist">
+        <input class="tth-input" type="email" placeholder="your@email.com" id="tthEmail" />
+        <button class="tth-btn" onclick="joinWaitlist()">Notify Me</button>
+      </div>
+      <p class="tth-note" id="tthMsg"></p>
+    </div>
+    <ul class="tth-feats">
+      <li>🔧 Plumbing &amp; Electrical</li>
+      <li>🧹 Deep Cleaning &amp; Housekeeping</li>
+      <li>📺 Appliance Repair &amp; Installation</li>
+      <li>🎨 Painting &amp; Carpentry</li>
+      <li>✅ Background-verified professionals</li>
+      <li>💳 UPI, card &amp; cash payments</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── IMPACT NUMBERS ── -->
+<div class="impact reveal">
+  <div class="impact-item">
+    <div class="impact-n">₹45L Cr</div>
+    <div class="impact-l">India Kirana Economy</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-n">$2.5B</div>
+    <div class="impact-l">Fitness App Market by 2033</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-n">$1.8B</div>
+    <div class="impact-l">Astrology Market by 2030</div>
+  </div>
+  <div class="impact-item">
+    <div class="impact-n">700M</div>
+    <div class="impact-l">Smartphone Users in India</div>
+  </div>
+</div>
+
+<!-- ── PRINCIPLES ── -->
+<section class="principles">
+  <div class="principles-orb"></div>
+  <div class="reveal" style="position:relative">
+    <p class="eyebrow">Our Principles</p>
+    <h2 class="principles-heading">Built for <em>Bharat</em>,<br/>built to last.</h2>
+    <p class="principles-sub">Every design decision, pricing choice and feature prioritisation starts with the same question: does this actually work for the Indian user?</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-icon">📱</span>
+        <div class="pillar-title">Mobile First</div>
+        <div class="pillar-desc">Built for Android — the platform of 95% of India's smartphone users</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🔌</span>
+        <div class="pillar-title">Offline Ready</div>
+        <div class="pillar-desc">Core features work without internet — because connectivity isn't always guaranteed</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">💰</span>
+        <div class="pillar-title">Truly Affordable</div>
+        <div class="pillar-desc">Priced for Indian wallets — not for venture capital metrics</div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🇮🇳</span>
+        <div class="pillar-title">Made in India</div>
+        <div class="pillar-desc">Designed, built and maintained entirely from India, for India</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Kogniti<span>Labs</span></div>
+      <p class="footer-sub">KognitiLabs is the parent company behind our product brands — technology for everyday Indian life. Built in India, for India.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul class="footer-links">
+        <li><a href="#kiranax">KiranaX</a></li>
+        <li><a href="#vitality">Vitality</a></li>
+        <li><a href="#kundali">Kundali</a></li>
+        <li><a href="#touchtohome">TouchToHome ↗</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#ecosystem">Products</a></li>
+        <li><a href="mailto:careers@kognitilabs.com?subject=Careers%20inquiry">Careers</a></li>
+        <li><a href="mailto:support@kognitilabs.com">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul class="footer-links">
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="mailto:support@kognitilabs.com">Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 KognitiLabs. All rights reserved.</p>
+    <p class="footer-india">Made with <span>♥</span> in India</p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Waitlist
+function joinWaitlist() {
+  const email = document.getElementById('tthEmail').value.trim();
+  const msg = document.getElementById('tthMsg');
+  if (!email || !email.includes('@')) {
+    msg.textContent = 'Please enter a valid email address.';
+    msg.style.color = '#ef4444';
+    return;
+  }
+  msg.textContent = '✓ You\'re on the list! We\'ll notify you when TouchToHome launches in your city.';
+  msg.style.color = 'var(--services)';
+  document.getElementById('tthEmail').value = '';
+}
+
+// Nav scroll border
+window.addEventListener('scroll', () => {
+  document.getElementById('topnav').style.borderBottomColor =
+    window.scrollY > 60 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.07)';
+});
+
+// Mobile nav
+(function () {
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (!toggle || !menu) return;
+
+  function setOpen(open) {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('nav-open', open);
+  }
+
+  toggle.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.matchMedia('(max-width: 900px)').matches) setOpen(false);
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  window.addEventListener('resize', function () {
+    if (!window.matchMedia('(max-width: 900px)').matches) setOpen(false);
+  });
+})();
+</script>
+</body>
+</html>
